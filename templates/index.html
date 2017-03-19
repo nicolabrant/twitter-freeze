@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>twitter_freeze</title>
+
+<style type="text/css">
+   body {
+background-color: #4682b4;
+}
+
+    h1 {
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 85px;
+      color: #FFFFFF;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 500;
+      line-height: 26.4px;
+      padding: 150px 0px 50px 0px;
+      width:1000px;
+      margin: auto;
+    }
+
+
+    div {
+      width:900px;
+      font-size: 18px;
+      color: #FFFFFF;
+      margin: auto;
+      padding: 0px 0px 0px 0px;
+      font-family: Arial, Helvetica, sans-serif;
+      }
+
+    p.sansserif {
+      font-family: Arial, Helvetica, sans-serif;
+      }
+
+
+
+</style>
+
+
+  <!-- in style: background image, padding for elements, arial font fam, h1 size-->
+  <!--body {
+      background-color: #cccccc;
+  }-->
+
+</head>
+
+<body>
+
+  <div class="image-cropper">
+  <img src="{{url_for('static', filename='photos/ice.jpg')}}" />
+  </div>
+
+  <div>
+    <h1>Twitter Freeze</h1>
+  </div>
+
+
+<!--
+  <p> <img src="{{url_for('static', filename='photos/sea.jpg')}}"></p>
+-->
+
+  <div>
+    <p class="sansserif">We are a trio from Sheffield University, eager to make research on the go easier!</p>
+    <p class="sansserif">Have you ever wanted a <em>frozen</em> copy of your <em>Twitter</em> search delivered to your inbox, so    that you can download it and read it on demand?</p>
+    <p class="sansserif">...on the bus?</p>
+    <p class="sansserif">...in a cafe?</p>
+    <p class="sansserif">...on the beach?</p>
+    <p class="sansserif">Just enter the hashtag and the email you would like the search results sent to and we'll take it from there!</p>
+  </div>
+
+  <!-- from hello.py user-entry-form part-->
+
+  <div id="contact-form">
+    <form method="post" action="/signup">
+      <label for="hashtag">#: </label>
+      <input type="text" id="hashtag" name="hashtag" value="" placeholder="
+      your tag (without the hash)" required="required" autofocus="autofocus" />
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" value="" placeholder="
+      Your Email" required="required" />
+      <input type="checkbox" name="rawdata" id="rawdata"/>
+      <input type="submit" value="Submit" id="submit-button" />
+    </form>
+  </div>
+
+  <!-- logo image -->
+
+
+</body>
+
+</html>

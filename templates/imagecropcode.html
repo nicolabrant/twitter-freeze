@@ -1,0 +1,23 @@
+.image-cropper {
+max-width: 100px;
+height: auto;
+position: relative;
+overflow: hidden;
+}
+
+.image-cropper img{
+    display: block;
+  margin: 0 auto;
+  height: auto;
+   width: 150%;
+  margin: 0 0 0 -20%;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+border-radius: 50%;
+}
+
+<div class="image-cropper">
+<img src="{{url_for('static', filename='photos/bubble.jpg')}}" class="rounded" />
+</div>
