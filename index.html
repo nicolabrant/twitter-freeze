@@ -35,6 +35,20 @@ background-color: #4682b4;
       font-family: Arial, Helvetica, sans-serif;
       }
 
+   
+   
+   .header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
 
 
 </style>
@@ -43,13 +57,17 @@ background-color: #4682b4;
 
 <body>
 
+   <div class="header">
+  <img src="{{url_for('static', filename='photos/ice.jpg')}}" alt="logo" />
+  <h1>Twitter Freeze</h1>
+   </div>
+   
+<!--   
   <img src="{{url_for('static', filename='photos/ice.jpg')}}" />
-
-
   <div>
     <h1>Twitter Freeze</h1>
   </div>
-
+-->
 
 <!--
   <p> <img src="{{url_for('static', filename='photos/sea.jpg')}}"></p>
