@@ -29,6 +29,8 @@ if __name__ == '__main__':
 
     # Now filtering our stream to capture the data by the
     # given hashtag
-    stream.filter(track = ['#'hashtag])
+    hsh = '#'
+    hshhashtag = hsh + hashtag
+    stream.filter(track = ['hshhashtag'])
 
  \ No newline at end of file
