@@ -22,7 +22,7 @@ Best wishes,
 Twitter Freeze
 """
 
-if rawdata = "on" 
+if form_data = "on" 
 	
 	msg.attach(MIMEText(body, 'plain'))
     
@@ -42,8 +42,8 @@ if rawdata = "on"
 
 	part_rd.add_header('Content-Disposition', "attachment; filename= %s" % filename_rd, )
  
-	msg.attach(part_rd)
-	msg.attach(part_an)
+	msg.attach(attachment_rd)
+	msg.attach(attachment_an)
  
 	server = smtplib.SMTP('smtp.gmail.com', 587)
 	server.starttls()
