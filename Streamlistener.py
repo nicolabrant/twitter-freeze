@@ -1,21 +1,24 @@
+# -*- coding: utf-8 -*-
 import tweepy
 from tweepy.streaming import StreamListener
 from tweepy import Stream
 from Twitkeys import *
 import json
-from hello.py import hashtag
+#from hello.py import hashtag
 
 # creating a listener to get the tweets received
 # this will notify us if there is an error
+from hello.py import hashtag
+
 class MyStreamListener(StreamListener):
 
 
-def on_data(self, data):
-    print (data)
-    return (True)
+    def on_data(self, data):
+        print (data)
+        return (True)
 
-def on_error(self, data):
-    print (status)
+    def on_error(self, data):
+        print (status)
 
 
 if __name__ == '__main__':
@@ -25,12 +28,8 @@ if __name__ == '__main__':
     # authorization and set up
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_sec)
-    stream = Stream(auth, l)
+    stream = Stream(auth, l, timeout=5)
 
     # Now filtering our stream to capture the data by the
     # given hashtag
-    hsh = '#'
-    hshhashtag = hsh + hashtag
-    stream.filter(track = ['hshhashtag'])
-
- \ No newline at end of file
+    stream.filter(track =[hashtag])

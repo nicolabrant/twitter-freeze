@@ -13,8 +13,6 @@
 
 import os #added to deploy using heroku
 from flask import Flask, request, render_template
-import matplotlib.pyplot as plt
-import numpy as np
 
 
 app = Flask("MyApp")
@@ -30,8 +28,10 @@ def sign_up():
     email = form_data.getvalue('email')
     rawdata = form_data.getvalue('rawdata')
 
-os.system('Streamlistener.py' > rawdata.txt)
 
+    os.system('Streamlistener.py' > rawdata.txt)
+    os.system('Dataprocess.py' > rawdata.txt)
+    os.system('email_nomailgun.py' > rawdata.txt)
     return render_template("allok.html")
 
 #added bit to deploy using heroku
