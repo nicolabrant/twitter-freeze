@@ -14,7 +14,6 @@
 import os #added to deploy using heroku
 from flask import Flask, request, render_template
 
-
 app = Flask("MyApp")
 
 @app.route("/")
@@ -24,14 +23,13 @@ def hello():
 @app.route("/signup", methods=['POST'])
 def sign_up():
     form_data = request.form
-    hashtag = form_data.getvalue('hashtag')
-    email = form_data.getvalue('email')
-    rawdata = form_data.getvalue('rawdata')
+    print form_data['hashtag']
+    print form_data['email']
+    print form_data['rawdata']
 
-
-    os.system('Streamlistener.py' > rawdata.txt)
-    os.system('Dataprocess.py' > rawdata.txt)
-    os.system('email_nomailgun.py' > rawdata.txt)
+    os.system('Streamlistener.py'> rawdata.txt)
+    os.system('Dataprocess.py')
+    os.system('email_nomailgun.py')
     return render_template("allok.html")
 
 #added bit to deploy using heroku
@@ -39,7 +37,3 @@ if 'PORT' in os.environ:
      app.run(host='0.0.0.0', port=int(os.environ['PORT']))
 else:
      app.run(debug=True)
-
-
-
- \ No newline at end of file

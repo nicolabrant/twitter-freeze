@@ -8,7 +8,7 @@ import json
 
 # creating a listener to get the tweets received
 # this will notify us if there is an error
-from hello.py import hashtag
+from hello.py import raw_data
 
 class MyStreamListener(StreamListener):
 
@@ -32,4 +32,4 @@ if __name__ == '__main__':
 
     # Now filtering our stream to capture the data by the
     # given hashtag
-    stream.filter(track =[hashtag])
+    stream.filter(track =form_data['hashtag'])
